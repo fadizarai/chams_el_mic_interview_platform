@@ -523,7 +523,8 @@
       margin-bottom: 10px
     }
 
-    .req-note {
+    .req-note,
+    .f small.req-note {
       display: inline-block;
       font-size: 10px;
       font-weight: 800;
