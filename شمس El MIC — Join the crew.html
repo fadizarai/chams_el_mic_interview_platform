@@ -44,7 +44,7 @@
         alt="Retro TV showing the Chams El MIC test card">
       <div>
         <h2>A side project of Microsoft Club ISSATSo</h2>
-        <p>Inspired by the nostalgic Tunisian TV show <i>Chams Alik</i>, Chams El MIC is where our trendy, funny, crazy
+        <p>Inspired by the nostalgic Tunisian TV shows , Chams El MIC is where our trendy, funny, crazy
           and creative ideas come alive. The main MIC page is polished and slow. This one is fast, weekly, and imperfect
           on purpose.</p>
         <div class="what">
@@ -76,25 +76,25 @@
       <div class="steps">
         <article>
           <h3>Weekly bulletin</h3>
-          <p>Our fake news show: the ISSATSO weather report ("70% chance of a surprise exam"), absurd headlines, and the
-            quote of the week overheard in the hallway.</p>
+          <p>we choose a topic or a trendy event and we make a short content about it but the reciepe is to make it as
+            funny as possible </p>
         </article>
         <article>
           <h3>Caught at ISSATSO</h3>
-          <p>You send memes, funny moments, reels and photos. We curate and caption. This is what makes it a community,
-            not a page run by five people.</p>
+          <p>You send memes, funny moments, reels and photos. We curate and caption. This is what makes it a community.
+          </p>
         </article>
         <article>
           <h3>Micro-trottoir</h3>
-          <p>Chams Alik style street interviews with silly 30-second questions, filmed in the hallways, the buvette and
-            the foyer.</p>
+          <p>Chams el mic style street interviews with silly 30-second questions, filmed in the hallways, the buvette .
+          </p>
         </article>
       </div>
       <h2 class="house-rules-heading">House rules</h2>
       <ul class="charter">
         <li>Humor about exams, the buvette, the resto and the foyer</li>
-        <li>Gentle jokes about teachers only</li>
-        <li>Every post is reviewed by two editors</li>
+        <li>We don't joke about teachers .</li>
+        <li>Every post is reviewed by two editors and the producer</li>
         <li>Credit if you want it, anonymous if you don't</li>
         <li class="n">Targeting a person without their agreement</li>
         <li>Anything can be removed, just ask</li>
@@ -106,19 +106,19 @@
     <div class="wrap">
       <h2>The interview</h2>
       <p class="application-intro">Fill in this application like you're a guest on the show. The crazier
-        your answers, the better your chances. Submissions are read by our curator every week.</p>
+        your answers, the better your chances. Submissions are read by our curator.</p>
       <form id="f" novalidate>
         <div id="formbody">
           <fieldset>
             <legend>Who are you?</legend>
             <div class="g">
-              <label class="f">Full name<input type="text" name="name" required autocomplete="name"
+              <label class="f">Full name<small class="req-note">Required</small><input type="text" name="name" required autocomplete="name"
                   placeholder="Your name, as on the attendance sheet"></label>
-              <label class="f">Phone number<input type="tel" name="phone" required autocomplete="tel"
+              <label class="f">Phone number<small class="req-note">Required</small><input type="tel" name="phone" required autocomplete="tel"
                   placeholder="+216 …"></label>
-              <label class="f">Facebook link<input type="url" name="facebook"
+              <label class="f">Facebook link<small class="req-note">Required</small><input type="url" name="facebook" required
                   placeholder="https://facebook.com/…"></label>
-              <label class="f">Instagram link<input type="url" name="instagram"
+              <label class="f">Instagram link<small class="req-note">Required</small><input type="url" name="instagram" required
                   placeholder="https://instagram.com/…"></label>
             </div>
           </fieldset>
@@ -169,7 +169,7 @@
             <p class="sub">Do you swear to bring good vibes, zero drama, and elite humor to the Chams El MIC community?
             </p>
             <label class="opt"><input type="radio" name="oath" value="Wallah I swear" required>
-              <div><b>Wallah I swear.</b></div>
+              <div><b>Wallah.</b></div>
             </label>
             <label class="opt"><input type="radio" name="oath" value="Only if there's coffee involved">
               <div><b>Only if there's coffee involved.</b></div>
@@ -186,7 +186,10 @@
                 link" to Viewer, then paste the link here.</small><input type="url" name="drive"
                 placeholder="https://drive.google.com/drive/folders/…"></label>
           </fieldset>
-          <button class="b y" type="submit" id="go">Send my application</button>
+          <div class="form-actions">
+            <button class="b y" type="submit" id="go">Send my application</button>
+            <button class="b o" type="button" id="dlpdf">⬇ Download as PDF</button>
+          </div>
           <div class="err" id="err" role="alert"></div>
         </div>
         <div id="ok" tabindex="-1"></div>
