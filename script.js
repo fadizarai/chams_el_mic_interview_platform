@@ -7,7 +7,7 @@
       // Shared Drive folder where each candidate creates their own folder.
       driveFolder: "https://drive.google.com/drive/folders/1q2_h8qsWK98lzIp7lBUk5NIuYo87Y4Lu?usp=sharing",
       // Paste your Google Apps Script Web App URL here to save applications in a Google Sheet (works once hosted on Vercel/Netlify).
-      sheetUrl: ""
+      sheetUrl: "https://script.google.com/macros/s/AKfycbx5yiHi2I_Htoz74GWhrT_oeaZKGgJyoJlfVpo3q4lJfPnJ2lVjHHlJKEGa8SGi_Hez/exec"
     };
     /* ===================== */
 
