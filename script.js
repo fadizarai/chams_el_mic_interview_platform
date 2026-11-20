@@ -137,3 +137,69 @@
       win.document.write(html);
       win.document.close();
     });
+
+    // ── Idea Corner Submission ────────────────────────────────────────────────
+    const ideaForm = $('#ideaForm');
+    if (ideaForm) {
+      ideaForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const f = e.target, err = $('#ideaErr');
+        err.textContent = '';
+        const d = Object.fromEntries(new FormData(f));
+
+        if (!d.idea_title || !d.idea_title.trim()) {
+          err.textContent = 'Please enter an idea title or pitch.';
+          f.idea_title.focus();
+          return;
+        }
+        if (!d.idea_details || !d.idea_details.trim()) {
+          err.textContent = 'Please explain your idea in a few sentences.';
+          f.idea_details.focus();
+          return;
+        }
+
+        const btn = $('#submitIdeaBtn');
+        btn.disabled = true;
+        btn.textContent = 'Pitching idea…';
+
+        const payload = {
+          type: 'idea',
+          submittedAt: new Date().toISOString(),
+          title: d.idea_title.trim(),
+          category: d.idea_category || 'ISSATSO Campus Life',
+          details: d.idea_details.trim(),
+          author: (d.idea_author && d.idea_author.trim()) ? d.idea_author.trim() : 'Anonymous',
+          contact: (d.idea_contact && d.idea_contact.trim()) ? d.idea_contact.trim() : 'None',
+          credit: d.idea_credit_on_screen ? 'Yes' : 'No'
+        };
+
+        if (CONFIG.sheetUrl) {
+          try {
+            await fetch(CONFIG.sheetUrl, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'text/plain' },
+              body: JSON.stringify(payload)
+            });
+          } catch (x) { }
+        }
+
+        $('#ideabody').classList.add('form-hidden');
+        const ideaOk = $('#ideaOk');
+        ideaOk.classList.add('is-visible');
+        ideaOk.focus();
+      });
+
+      const anotherBtn = $('#anotherIdeaBtn');
+      if (anotherBtn) {
+        anotherBtn.addEventListener('click', () => {
+          ideaForm.reset();
+          $('#ideabody').classList.remove('form-hidden');
+          $('#ideaOk').classList.remove('is-visible');
+          const btn = $('#submitIdeaBtn');
+          btn.disabled = false;
+          btn.textContent = '🚀 Pitch this idea';
+          $('#ideaErr').textContent = '';
+        });
+      }
+    }

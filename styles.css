@@ -609,3 +609,87 @@
     #ok.is-visible {
       display: block
     }
+
+    /* ── Idea Corner ── */
+    .idea-tag {
+      background: var(--yel);
+      color: #111;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 4px 14px;
+      border-radius: 99px;
+      display: inline-block;
+      margin-bottom: 12px;
+      box-shadow: 2px 2px 0 var(--red);
+    }
+
+    #ideaForm {
+      box-shadow: 10px 10px 0 var(--red);
+    }
+
+    .idea-types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .opt-mini {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 2px solid #14202a;
+      border-radius: 99px;
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      color: #14202a;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .opt-mini:active {
+      transform: scale(0.98);
+    }
+
+    .opt-mini:has(input:checked) {
+      background: var(--yel);
+      border-color: #14202a;
+    }
+
+    .opt-mini input {
+      accent-color: #14202a;
+      margin: 0;
+    }
+
+    .opt-credit {
+      margin-top: 16px;
+    }
+
+    .idea-success-box {
+      display: none;
+      text-align: center;
+      padding: 36px 16px;
+    }
+
+    .idea-success-box.is-visible {
+      display: block;
+    }
+
+    .idea-success-box h3 {
+      font-size: clamp(26px, 4vw, 36px);
+      color: #14202a;
+      margin-bottom: 12px;
+    }
+
+    .idea-success-box p {
+      max-width: 52ch;
+      margin: 0 auto 24px;
+      color: #44566a;
+      font-size: 17px;
+    }
+
+    .idea-success-box .cta {
+      justify-content: center;
+    }
